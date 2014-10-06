@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<homework>
+  <entry id="1">
+    <title>Englisch Vokabeln</title>
+    <expires>06.10.2014 12:43:30</expires>
+    <subject>Französisch</subject>
+    <content>Blub</content>
+    <owner>Felix</owner>
+  </entry>
+  <entry id="2">
+    <title>Aufn Kopf stellen und Fliegen fangen</title>
+    <expires>09.10.2014 12:42:30</expires>
+    <subject>Sport</subject>
+    <content>Flowfact ist kuhl</content>
+    <owner>Joshua</owner>
+  </entry>
+  <entry id="3">
+    <title>Gedicht lernen</title>
+    <expires>09.10.2014 12:42:30</expires>
+    <subject>Deutsch</subject>
+    <content>Rosen sind rot</content>
+    <owner>Markward</owner>
+  </entry>
+  <entry id="4">
+    <title>Butter essen</title>
+    <expires>05.10.2014 12:42:30</expires>
+    <subject>Hauswirtschaft</subject>
+    <content>Blubber</content>
+    <owner>Joshua</owner>
+  </entry>
+</homework>

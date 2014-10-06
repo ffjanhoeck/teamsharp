@@ -104,12 +104,28 @@ namespace WindowsFormsApplication1
 
         public void SendNewHomework(string title, string content, DateTime expireDate)
         {
-            System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(new Uri("http://" + ServerAddress + "/magie"));
+            System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(new Uri("http://" + ServerAddress + "/homework"));
             request.Method = "PUT";
             request.ContentType = "application/x-www-form-urlencoded";
             byte[] requestData = Encoding.UTF8.GetBytes(string.Format("title={0}&content={1}", System.Web.HttpUtility.UrlEncode(title), System.Web.HttpUtility.UrlEncode(content)));
             request.ContentLength = requestData.Length;
             using(var binaryWriter = new System.IO.BinaryWriter(request.GetRequestStream()))
+            {
+                binaryWriter.Write(requestData, 0, requestData.Length);
+                binaryWriter.Close();
+            }
+
+            // get response! actually useless
+        }
+        
+        public void SendNotificationCreate(int id, string notificationTime)
+        {
+            System.Net.HttpWebRequest request = (System.Net.HttpWebRequest)System.Net.HttpWebRequest.Create(new Uri("http://" + ServerAddress + "/notification"));
+            request.Method = "PUT";
+            request.ContentType = "application/x-www-form-urlencoded";
+            byte[] requestData = Encoding.UTF8.GetBytes(string.Format("title={0}&content={1}", System.Web.HttpUtility.UrlEncode(title), System.Web.HttpUtility.UrlEncode(content)));
+            request.ContentLength = requestData.Length;
+            using (var binaryWriter = new System.IO.BinaryWriter(request.GetRequestStream()))
             {
                 binaryWriter.Write(requestData, 0, requestData.Length);
                 binaryWriter.Close();

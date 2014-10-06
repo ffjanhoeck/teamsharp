@@ -29,3 +29,10 @@
     <owner>Joshua</owner>
   </entry>
 </homework>
+<!--<notifications>
+  <entry>
+    <homework>id</homework>
+    <user>id</user>
+    <notificationOffset>5m</notificationOffset>
+  </entry>
+</notifications>-->

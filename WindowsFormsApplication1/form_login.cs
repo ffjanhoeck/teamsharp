@@ -15,6 +15,8 @@ namespace WindowsFormsApplication1
         public form_login()
         {
             InitializeComponent();
+            this.textBox_username.KeyUp += textBox_username_KeyUp;
+            this.textBox_password.KeyUp += textBox_username_KeyUp;
         }
 
         #region Buttons
@@ -22,6 +24,15 @@ namespace WindowsFormsApplication1
         private void button_cancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        void textBox_username_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.button_login.PerformClick();
+                e.Handled = true;
+            }
         }
 
         private void button_login_Click(object sender, EventArgs e)

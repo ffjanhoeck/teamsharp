@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_main));
             this.listView_homework = new System.Windows.Forms.ListView();
             this.columnHeader_title = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader_subject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader_expire = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox_homework = new System.Windows.Forms.TextBox();
             this.button_add = new System.Windows.Forms.Button();
@@ -39,8 +42,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.button_sortByExpireDate = new System.Windows.Forms.Button();
             this.checkBox_showAll = new System.Windows.Forms.CheckBox();
-            this.columnHeader_subject = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button_done = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.button_add_notification = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView_homework
@@ -69,6 +73,11 @@
             // 
             this.columnHeader_owner.Text = "Ersteller";
             this.columnHeader_owner.Width = 68;
+            // 
+            // columnHeader_subject
+            // 
+            this.columnHeader_subject.DisplayIndex = 3;
+            this.columnHeader_subject.Text = "Fach";
             // 
             // columnHeader_expire
             // 
@@ -124,7 +133,7 @@
             this.tabControl1.Location = new System.Drawing.Point(281, 10);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(350, 336);
+            this.tabControl1.Size = new System.Drawing.Size(350, 307);
             this.tabControl1.TabIndex = 5;
             // 
             // button_sortByExpireDate
@@ -150,11 +159,6 @@
             this.checkBox_showAll.UseVisualStyleBackColor = true;
             this.checkBox_showAll.CheckedChanged += new System.EventHandler(this.checkBox_showAll_CheckedChanged);
             // 
-            // columnHeader_subject
-            // 
-            this.columnHeader_subject.DisplayIndex = 3;
-            this.columnHeader_subject.Text = "Fach";
-            // 
             // button_done
             // 
             this.button_done.Location = new System.Drawing.Point(460, 352);
@@ -165,11 +169,28 @@
             this.button_done.UseVisualStyleBackColor = true;
             this.button_done.Click += new System.EventHandler(this.button_done_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // button_add_notification
+            // 
+            this.button_add_notification.Location = new System.Drawing.Point(281, 323);
+            this.button_add_notification.Name = "button_add_notification";
+            this.button_add_notification.Size = new System.Drawing.Size(350, 23);
+            this.button_add_notification.TabIndex = 9;
+            this.button_add_notification.Text = "Benachrichtigung erstellen";
+            this.button_add_notification.UseVisualStyleBackColor = true;
+            this.button_add_notification.Click += new System.EventHandler(this.button_add_notification_Click);
+            // 
             // form_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 387);
+            this.Controls.Add(this.button_add_notification);
             this.Controls.Add(this.button_done);
             this.Controls.Add(this.checkBox_showAll);
             this.Controls.Add(this.button_sortByExpireDate);
@@ -201,5 +222,7 @@
         private System.Windows.Forms.CheckBox checkBox_showAll;
         private System.Windows.Forms.ColumnHeader columnHeader_subject;
         private System.Windows.Forms.Button button_done;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button_add_notification;
     }
 }

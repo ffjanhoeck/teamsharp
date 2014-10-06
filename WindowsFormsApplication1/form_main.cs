@@ -28,6 +28,9 @@ namespace WindowsFormsApplication1
             XmlDocument homework = this.RequestList();
             this.ProcessList(homework);
             this.Reorder();
+
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.ShowBalloonTip(5000, "Test test test", "Text!", ToolTipIcon.Info);
         }
 
         #endregion
@@ -190,6 +193,11 @@ namespace WindowsFormsApplication1
         private void button_delete_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Daten werden nicht gelöscht\n#NSA");
+        }
+
+        private void button_add_notification_Click(object sender, EventArgs e)
+        {
+
         }
 
     }
